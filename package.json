@@ -1,0 +1,20 @@
+{
+  "name": "tensor",
+  "version": "1.0.0",
+  "description": "A client for the Matrix chat protocol",
+  "main": "app/main.js",
+  "scripts": {
+    "build": "bin/build",
+    "serve": "http-server dist",
+    "watch": "watchify -d app/main.js -o dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^16.2.3",
+    "matrix-js-sdk": "^1.0.0-rc.1",
+    "sourceify": "^0.1.0",
+    "watchify": "^3.11.0"
+  }
+}

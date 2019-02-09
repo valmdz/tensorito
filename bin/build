@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -ex
+mkdir -p dist
+browserify -d app/main.js > dist/main.js

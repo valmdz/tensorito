@@ -1,0 +1,35 @@
+* html: Hyper Text Markup Language, display things
+ul - unordered lists
+li - list item (inside e.g. ul)
+
+* js: JavaScript, making things do stuff
+document
+  querySelector - returns a list
+     of things from html using css-selectors
+  createElement - create HTML node
+element
+  innerText  - set the text of an HTML node
+  appendChild - add node to other node
+
+Example:
+  const parent = ...
+  const child  = ...
+  parent.appendChild(child);
+
+* css: Cascading Style Sheets - make things look cool
+
+Selectors:
+
+    element-name
+    .class-name
+    #id
+    [attribute]
+    [attribute=value]
+    [id=4]         ~ #4
+    [class=classy] ~ .classy
+
+Example:
+
+    ul .selected {
+      background-color: red;
+    }

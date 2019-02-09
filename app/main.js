@@ -1,12 +1,18 @@
-const matrix = require('matrix-js-sdk');
-// const client = matrix.createClient('https://matrix.org');
+const config = require('./config');
 
-const mockData = require('./data');
-const client = {
-  publicRooms: (f) => {
-    f(null, mockData);
+const client = (() => {
+  if(config.production) {
+    const matrix = require('matrix-js-sdk');
+    return matrix.createClient('https://matrix.org');
+  } else {
+    const mockData = require('./data');
+    return {
+      publicRooms: (f) => {
+        f(null, mockData);
+      }
+    };
   }
-};
+})();
 
 const init = () => {
   // Here we can access the DOM.

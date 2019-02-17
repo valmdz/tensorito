@@ -14,6 +14,7 @@
   "dependencies": {
     "browserify": "^16.2.3",
     "matrix-js-sdk": "^1.0.0-rc.1",
+    "rivets": "^0.9.6",
     "sourceify": "^0.1.0",
     "watchify": "^3.11.0"
   }

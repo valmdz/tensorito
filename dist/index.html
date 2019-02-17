@@ -3,13 +3,18 @@
  <head>
   <script defer src="main.js"></script>
   <link href="style.css" rel="stylesheet">
+  <title>Tensor</title>
  </head>
  <body>
   <main>
    <h1>Tensor</h1>
-   <ul id="chat-rooms">
-    <li rv-each-room="chunk">{ room.name }</li>
-   </ul>
+   <section id="chat-rooms">
+    <div class="room" rv-each-room="chunk">
+     <h2 class="truncate">{ room.name }</h2>
+     <div class="muted">{ room.num_joined_members } members</div>
+     <p class="truncate" rv-if="room.topic">{ room.topic }</p>
+    </div>
+   </section>
   </main>
  </body>
 </html>
